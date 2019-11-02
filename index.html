@@ -81,7 +81,7 @@
 		<div class="container">
 			<div class="relative">
 				<img class="ana" src="images/穴.png">
-				<img class="mogura uwagaki" src="images/モグ2.png">
+				<img class="mogura uwagaki" onclick="HitMogura()"  src="images/モグ2.png">
 			</div>
 			<div class="relative">
 				<img class="ana" src="images/穴.png">
@@ -123,7 +123,17 @@
 	</div>
 
 	<script>
+		var moguras = document.querySelectorAll(".mogura");
+		for (let index = 0; index < moguras.length; index++) {
+			const element = moguras[index];
+			element.onclick = HitMogura;
+		}
 		// ここにJavaScriptを書く
+		
+		function HitMogura(){
+			var mogura = event.target;
+			mogura.src = "images/モグ1.png";
+		}
 	</script>
 </body>
 
