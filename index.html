@@ -127,12 +127,20 @@
 		for (let index = 0; index < moguras.length; index++) {
 			const element = moguras[index];
 			element.onclick = HitMogura;
+
+			
 		}
 		// ここにJavaScriptを書く
 		
 		function HitMogura(){
 			var mogura = event.target;
 			mogura.src = "images/モグ1.png";
+
+			setTimeout(modoruMogura, 500, mogura);
+		}
+
+		function modoruMogura(mogura){
+			mogura.src = "images/モグ2.png";
 		}
 	</script>
 </body>
